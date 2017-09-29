@@ -7,7 +7,9 @@
     "example": "examples"
   },
   "scripts": {
-    "test": "node examples/nodejs/test.js"
+    "test": "node examples/nodejs/test.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -20,9 +22,11 @@
   "dependencies": {
     "grunt": "*",
     "grunt-contrib-connect": "*",
-    "request": "~2.51.0"
+    "request": "~2.51.0",
+    "snyk": "^1.41.1"
   },
   "engines": {
     "node": ">=0.10.0"
-  }
+  },
+  "snyk": true
 }
